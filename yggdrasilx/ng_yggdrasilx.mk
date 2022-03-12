@@ -19,22 +19,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common stuff
+$(call inherit-product, vendor/droid-ng/config/common_full_phone.mk)
 
-# Inherit from GX290 device
+# Inherit from yggdrasilx device
 $(call inherit-product, device/gigaset/GX290-unified/device.mk)
 
-PRODUCT_BRAND := gigaset
-PRODUCT_DEVICE := GX290
-PRODUCT_MANUFACTURER := Gigaset
-PRODUCT_NAME := lineage_GX290
-PRODUCT_MODEL := GX290
+TARGET_GAPPS_ARCH := arm64
 
-# Build info
-BUILD_FINGERPRINT := "Gigaset/GX290_EEA/GX290:10/QP1A.190711.020/1638413476:user/release-keys"
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=GX290_EEA \
-    PRIVATE_BUILD_DESC="full_k63v2_64_bsp-user 10 QP1A.190711.020 1638413476 release-keys"
-
-PRODUCT_GMS_CLIENTID_BASE := android-gigaset
+PRODUCT_BRAND := volla
+PRODUCT_DEVICE := yggdrasilx
+PRODUCT_MANUFACTURER := Volla
+PRODUCT_NAME := ng_yggdrasilx
+PRODUCT_MODEL := Volla Phone X
